@@ -75,8 +75,8 @@ async def set_timer(bot, message):
                     s=user_input_time%60
                     Countdown_TeLe_TiPs='{}\n\n⏳ **දින** {:02d}**යි**  **පැය** {:02d}**යි**  **මිනිත්තු** {:02d}**යි** **තත්පර** {:02d}  **ක** කාලයක් තිබෙයි. 📚\n\n<i>"ඔබ තවමත් ප්‍රමාද නැත"</i>\n\nPowered By '.format(user_input_event, d, h, m, s)
                     finish_countdown = await get_user_input_time.edit(Countdown_TeLe_TiPs)
-                    await asyncio.sleep(9)
-                    user_input_time -=9
+                    await asyncio.sleep(1)
+                    user_input_time -=1
                 await finish_countdown.edit("🚨 Beep! Beep!! **TIME'S UP!!!**")
             else:
                 await get_user_input_time.edit(f"🤷🏻‍♂️ I can't countdown from {user_input_time}")
