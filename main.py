@@ -25,7 +25,7 @@ async def set_timer(bot, message):
     global stoptimer
     try:
             dt1 = datetime.now()
-            dt2 = datetime(2022,2,7,00,00,00)
+            dt2 = datetime(2022,12,5,00,00,00)
             dt3 = int((dt2 - dt1).total_seconds())
             user_input_time = dt3
             user_input_event = str("🔥🔥උසස් පෙළ විභාගයට තව🔥🔥")
