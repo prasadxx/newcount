@@ -60,23 +60,23 @@ async def set_timer(bot, message):
                 while user_input_time>0 and not stoptimer:
                     h=user_input_time%(3600*24)//3600
                     m=user_input_time%3600//60
-                    s=user_input_time%60
+                    
 
-                    Countdown_TeLe_TiPs='{}\n\n⏳ **පැය** {:02d}**යි**  **මිනිත්තු** {:02d}**යි** **තත්පර** {:02d}**ක** කාලයක් තිබෙයි. 📚\n\n<i>"ඔබ තවමත් ප්‍රමාද නැත"</i>\n\nPowered By '.format(user_input_event, h, m, s)
+                    Countdown_TeLe_TiPs='{}\n\n⏳ **පැය** {:02d}**යි**  **මිනිත්තු** {:02d}**ක** කාලයක් තිබෙයි. 📚\n\n<i>"ඔබ තවමත් ප්‍රමාද නැත"</i>\n\nPowered By '.format(user_input_event, h, m)
                     finish_countdown = await get_user_input_time.edit(Countdown_TeLe_TiPs)
-                    await asyncio.sleep(7)
-                    user_input_time -=7
+                    await asyncio.sleep(60)
+                    user_input_time -=60
                 await finish_countdown.edit("🚨 Beep! Beep!! **TIME'S UP!!!**")
             elif user_input_time>=86400:
                 while user_input_time>0 and not stoptimer:
                     d=user_input_time//(3600*24)
                     h=user_input_time%(3600*24)//3600
                     m=user_input_time%3600//60
-                    s=user_input_time%60
-                    Countdown_TeLe_TiPs='{}\n\n⏳ **දින** {:02d}**යි**  **පැය** {:02d}**යි**  **මිනිත්තු** {:02d}**යි** **තත්පර** {:02d}  **ක** කාලයක් තිබෙයි. 📚\n\n<i>"ඔබ තවමත් ප්‍රමාද නැත"</i>\n\nPowered By '.format(user_input_event, d, h, m, s)
+                    
+                    Countdown_TeLe_TiPs='{}\n\n⏳ **දින** {:02d}**යි**  **පැය** {:02d}**යි**  **මිනිත්තු** {:02d}  **ක** කාලයක් තිබෙයි. 📚\n\n<i>"ඔබ තවමත් ප්‍රමාද නැත"</i>\n\nPowered By '.format(user_input_event, d, h, m)
                     finish_countdown = await get_user_input_time.edit(Countdown_TeLe_TiPs)
-                    await asyncio.sleep(1)
-                    user_input_time -=1
+                    await asyncio.sleep(60)
+                    user_input_time -=60
                 await finish_countdown.edit("🚨 Beep! Beep!! **TIME'S UP!!!**")
             else:
                 await get_user_input_time.edit(f"🤷🏻‍♂️ I can't countdown from {user_input_time}")
